@@ -3,5 +3,12 @@
 # arktype-idea-plugin Changelog
 
 ## [Unreleased]
+
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Preparation for DocumentationProvider
+- Preparation for ReferenceContributor
+- Preparation for CompletionContributor
+
+## 0.0.1
+### Added
+- Syntax Highlighting for ArkType Type Definitions

@@ -1,15 +1,32 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.niklaswortmann.arktypeideaplugin</id>
-    <name>arktype-idea-plugin</name>
-    <vendor>niklas-wortmann</vendor>
+    <name>ArkType Support</name>
+    <vendor>Jan-Niklas Wortmann</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>JavaScript</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.niklaswortmann.arktypeideaplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.niklaswortmann.arktypeideaplugin.startup.MyProjectActivity" />
+        <multiHostInjector implementation="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeLanguageInjector"/>
+        <lang.syntaxHighlighterFactory language="ArkType" implementationClass="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeSyntaxHighlighterFactory"/>
+        <lang.parserDefinition language="ArkType" implementationClass="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeParserDefinition"/>
+        <fileType name="ArkType" 
+                  implementationClass="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeFileType" 
+                  language="ArkType" 
+                  extensions="arktype"/>
+<!--        <completion.contributor language="ArkType" -->
+<!--                               implementationClass="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeCompletionContributor"/>-->
+<!--        <psi.referenceContributor language="ArkType"-->
+<!--                                 implementation="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeReferenceContributor"/>-->
+<!--        <lang.documentationProvider language="ArkType"-->
+                                  implementationClass="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeDocumentationProvider"/>
+        <lang.documentationProvider language="JavaScript"
+                                  implementationClass="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeDocumentationProvider"/>
+        <lang.documentationProvider language="TypeScript"
+                                  implementationClass="com.github.niklaswortmann.arktypeideaplugin.language.ArkTypeDocumentationProvider"/>
     </extensions>
 </idea-plugin>

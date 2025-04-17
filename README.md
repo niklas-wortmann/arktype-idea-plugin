@@ -1,4 +1,4 @@
-# arktype-idea-plugin
+# ArkType Idea Plugin
 
 ![Build](https://github.com/niklas-wortmann/arktype-idea-plugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
