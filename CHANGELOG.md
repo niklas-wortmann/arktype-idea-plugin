@@ -9,6 +9,10 @@
 - Preparation for ReferenceContributor
 - Preparation for CompletionContributor
 
+## 0.0.2
+### Fixed
+- Pluigin description
+
 ## 0.0.1
 ### Added
 - Syntax Highlighting for ArkType Type Definitions
